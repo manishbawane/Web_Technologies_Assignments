@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Tasks 35-60</title>
+</head>
+<body>
+
+  <!-- Task 35 -->
+  <input type="text" id="txt">
+  <button onclick="displayText()">Display Text</button>
+  <p id="para"></p>
+  <br><br>
+
+  <!-- Task 36 -->
+  <input type="text" id="txtNum">
+  <button onclick="displaySquare()">Display Square</button>
+  <p id="squareResult"></p>
+  <br><br>
+
+  <!-- Task 37 to 41 -->
+  <button onclick="arrayTasks()">Array Tasks</button>
+  <br><br>
+
+  <!-- Task 42 -->
+  <button onclick="squareCubeSeries()">Square and Cube Series</button>
+  <br><br>
+
+  <!-- Task 43 -->
+  <button onclick="addValueEnd()">Add 10 at End</button>
+
+  <!-- Task 44 -->
+  <button onclick="addValueStart()">Add 20 at Start</button>
+
+  <!-- Task 45 -->
+  <button onclick="removeLast()">Remove Last Value</button>
+
+  <!-- Task 46 -->
+  <button onclick="removeFirst()">Remove First Value</button>
+  <br><br>
+
+  <!-- Task 47 -->
+  <button onclick="searchArray()">Search Array</button>
+  <br><br>
+
+  <!-- Task 48 -->
+  <input type="text" id="mobile" placeholder="Enter mobile number">
+  <button onclick="validateMobile()">Validate Mobile</button>
+  <p id="mobileResult"></p>
+  <br><br>
+
+  <!-- Task 49 -->
+  <input type="text" id="email" placeholder="Enter email">
+  <button onclick="validateEmail()">Validate Email</button>
+  <p id="emailResult"></p>
+  <br><br>
+
+  <!-- Task 50 -->
+  <input type="text" id="name" placeholder="Enter name">
+  <button onclick="validateName()">Validate Name</button>
+  <p id="nameResult"></p>
+  <br><br>
+
+  <!-- Task 51 -->
+  <button onclick="sumWithReduce()">Sum Using Reduce</button>
+  <br><br>
+
+  <!-- Task 52 -->
+  <button onclick="squareArray()">Square Array</button>
+  <br><br>
+
+  <!-- Task 53 -->
+  <button onclick="filterArray()">Filter Array</button>
+  <br><br>
+
+  <!-- Task 54 -->
+  <button onclick="parseIntVsNumber()">parseInt vs Number</button>
+  <br><br>
+
+  <!-- Task 55 -->
+  <button onclick="calculate(10, 20)">Multiply (Calculate)</button>
+  <br><br>
+
+  <!-- Task 56 to 57 -->
+  <button onclick="showArrayAndObject()">Array and Object Example</button>
+  <br><br>
+
+  <!-- Task 58 -->
+  <button onclick="applyBodyColor()">Apply Background Color</button>
+  <br><br>
+
+  <!-- Task 59 -->
+  <input type="text" id="anonTxt" onblur="anonFunc()" onfocus="anonFunc()" placeholder="Blur or Focus Event">
+  <br><br>
+
+  <!-- Task 60 -->
+  <input type="text" id="txt60" placeholder="Enter value">
+  <button onclick="checkStringOrNumber()">Check String or Number</button>
+  <p id="typeResult"></p>
+  <br><br>
+
+  <script>
+    // Task 35
+    function displayText() {
+      let value = document.getElementById("txt").value;
+      document.getElementById("para").innerText = value;
+    }
+
+    // Task 36
+    function displaySquare() {
+      let num = parseFloat(document.getElementById("txtNum").value);
+      if (!isNaN(num)) {
+        document.getElementById("squareResult").innerText = Math.pow(num, 2);
+      }
+    }
+
+    // Task 37
+    function arrayTasks() {
+      let arr = [5, 10, 15];
+      console.log(arr); // Show array structure
+
+      // Task 38: For loop
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+
+      // Task 39: While loop
+      let j = 0;
+      while (j < arr.length) {
+        console.log(arr[j]);
+        j++;
+      }
+
+      // Task 40: For in loop
+      for (let index in arr) {
+        console.log(`Index: ${index}, Value: ${arr[index]}`);
+      }
+
+      // Task 41: Sum of all values
+      let sum = 0;
+      for (let i of arr) sum += i;
+      console.log("Sum:", sum);
+    }
+
+    // Task 42
+    function squareCubeSeries() {
+      for (let i = 1; i <= 10; i++) {
+        if (i % 2 === 0) {
+          console.log(`Cube of ${i}:`, i ** 3);
+        } else {
+          console.log(`Square of ${i}:`, i ** 2);
+        }
+      }
+    }
+
+    // Task 43 to 46: Array Operations
+    let arr = [1, 2, 3];
+    function addValueEnd() {
+      arr.push(10);
+      console.log(arr);
+    }
+
+    function addValueStart() {
+      arr.unshift(20);
+      console.log(arr);
+    }
+
+    function removeLast() {
+      arr.pop();
+      console.log(arr);
+    }
+
+    function removeFirst() {
+      arr.shift();
+      console.log(arr);
+    }
+
+    // Task 47
+    function searchArray() {
+      let arr = [10, 20, 30, 40, 50];
+      console.log("Index of 10:", arr.indexOf(10));
+      console.log("Index of 100:", arr.indexOf(100));
+    }
+
+    // Task 48 to 50: Validation
+    function validateMobile() {
+      let mobile = document.getElementById("mobile").value;
+      let result = mobile.match(/^\d{10}$/) ? "Valid mobile number" : "Invalid mobile number";
+      document.getElementById("mobileResult").innerText = result;
+    }
+
+    function validateEmail() {
+      let email = document.getElementById("email").value;
+      let result = email.match(/^\S+@\S+\.\S+$/) ? "Valid email" : "Invalid email";
+      document.getElementById("emailResult").innerText = result;
+    }
+
+    function validateName() {
+      let name = document.getElementById("name").value;
+      let result = /^[a-zA-Z ]+$/.test(name) ? "Valid name" : "Invalid name";
+      document.getElementById("nameResult").innerText = result;
+    }
+
+    // Task 51
+    function sumWithReduce() {
+      let arr = [10, 20, 30, 40, 50, 60, 70];
+      let sum = arr.reduce((acc, val) => acc + val, 0);
+      console.log("Sum:", sum);
+    }
+
+    // Task 52
+    function squareArray() {
+      let arr = [1, 2, 3, 4];
+      let squared = arr.map(x => x ** 2);
+      console.log("Squared Array:", squared);
+    }
+
+    // Task 53
+    function filterArray() {
+      let arr = [1, 4, 6, 8, 12, 11, 13];
+      let filtered = arr.filter(x => x < 10);
+      console.log("Filtered Array:", filtered);
+    }
+
+    // Task 54
+    function parseIntVsNumber() {
+      let value = "10.5";
+      console.log("parseInt:", parseInt(value)); // Parses as integer, removes decimal part
+      console.log("Number:", Number(value)); // Converts as is to number
+    }
+
+    // Task 55
+    function calculate(a, b) {
+      console.log(a * b);
+    }
+
+    // Task 56 to 57
+    function showArrayAndObject() {
+      let array = new Array(1, 2, 3);
+      console.log("Array:", array);
+
+      let obj = { name: "John", age: 25, location: "NY" };
+      console.log("Object:", obj);
+    }
+
+    // Task 58
+    function applyBodyColor() {
+      document.body.style.backgroundColor = "lightblue";
+    }
+
+    // Task 59
+    let anonFunc = function() {
+      console.log("Anonymous function triggered");
+    };
+
+    // Task 60
+    function checkStringOrNumber() {
+      let value = document.getElementById("txt60").value;
+      let result = isNaN(value) ? "String" : "Number";
+      document.getElementById("typeResult").innerText = result;
+    }
+  </script>
+</body>
+</html>
