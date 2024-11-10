@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Tasks Example</title>
+  <style>
+    /* 27. Create 3 div with dummy content, apply different font sizes using id attribute */
+    #div1 { font-size: 20px; }
+    #div2 { font-size: 30px; }
+    #div3 { font-size: 40px; }
+
+    /* 28. Example showing the advantage of class over ID */
+    .common-style { color: blue; font-size: 16px; }
+
+    /* 29. Apply border to the bottom section of p */
+    p { margin-bottom: 20px; }
+    .bottom-border { border-bottom-color: red; border-bottom-style: solid; border-bottom-width: 2px; }
+
+    /* 30. Border radius for the bottom-left corner of p */
+    .bottom-left-radius { border-bottom-left-radius: 10px; }
+
+    /* 31. Shift content of the paragraph using padding */
+    .shift-content { width: 100px; height: 100px; padding: 20px; }
+
+    /* 32. Apply 4 different border styles, colors, and widths */
+    .border-styles {
+      width: 100px; height: 100px;
+      border-top: solid 2px red;
+      border-right: dashed 3px blue;
+      border-bottom: dotted 4px green;
+      border-left: double 5px purple;
+    }
+
+    /* 33. Set the color of the left border to blue */
+    .blue-left-border { border-left: 3px solid blue; }
+
+    /* 34. Set the style of the left border to dashed */
+    .dashed-left-border { border-left: 3px dashed blue; }
+
+    /* 35. Set the width of the left border to medium */
+    .medium-left-border { border-left: medium solid blue; }
+
+    /* 36. Set text to lowercase, uppercase, and capitalize */
+    .lowercase { text-transform: lowercase; }
+    .uppercase { text-transform: uppercase; }
+    .capitalize { text-transform: capitalize; }
+
+    /* 37. Different font weights */
+    .normal-weight { font-weight: normal; }
+    .bold-weight { font-weight: bold; }
+    .light-weight { font-weight: 100; }
+    .extra-bold-weight { font-weight: 900; }
+
+    /* 38. Font size in em */
+    .font-size-em { font-size: 2em; }
+
+    /* 39-43. Padding examples */
+    .padding-all { padding: 20px; }
+    .padding-top-bottom { padding: 20px 0; }
+    .padding-right-left { padding: 0 20px; }
+    .padding-combined { padding: 20px 40px 40px; }
+    .padding-different { padding: 20px 40px 60px 10px; }
+
+    /* 44-45. Spacing properties */
+    .word-spacing { word-spacing: 10px; }
+    .letter-spacing { letter-spacing: 2px; }
+    .line-height { line-height: 2; }
+
+    /* 46-48. Set max-width, min-width, and height properties */
+    .max-width { max-width: 300px; }
+    .min-width { min-width: 100px; }
+    .height-example { height: 100px; }
+
+    /* 49. Small-caps font */
+    .small-caps { font-variant: small-caps; }
+
+    /* 50. Shorthand for border properties */
+    .shorthand-border { width: 100px; height: 100px; border: 2px solid black; }
+
+    /* 51. Center div using margin */
+    .center-div { width: 1000px; margin: 0 auto; background-color: lightblue; }
+
+    /* 52. Padding with shorthand and individual properties */
+    .padding-40px { width: 100px; height: 100px; padding: 40px; }
+    .padding-individual { width: 100px; height: 100px; padding-top: 40px; padding-right: 40px; padding-bottom: 40px; padding-left: 40px; }
+
+    /* 53. Scale div on hover using transform */
+    .scale-on-hover {
+      width: 100px; height: 100px; background-color: orange; transition: transform 0.3s;
+    }
+    .scale-on-hover:hover {
+      transform: scale(1.5);
+    }
+
+    /* 54. Preformatted text */
+    .preformatted { white-space: pre-wrap; }
+
+    /* 55. Links to various search engines */
+    .search-engine-links a { margin-right: 10px; }
+
+    /* 56. Links to different pages with target="_blank" */
+    .new-window-links a { margin-right: 10px; }
+
+    /* 57. Image with border */
+    .image-with-border {
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+    }
+
+    /* 58. Image with link to google */
+    .image-link {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+    }
+
+    /* 59. Text in italic */
+    .italic-text { font-style: italic; }
+
+    /* 60. Indent first line of paragraph */
+    .first-line-indent { text-indent: 20px; }
+
+    /* 61. Indent all lines of paragraph */
+    .all-lines-indent { padding-left: 20px; }
+
+    /* 62. Class example with multiple class names */
+    .multiple-classes { color: red; font-size: 16px; }
+
+    /* 63. ID example (with usage of id only once) */
+    #single-id { color: green; }
+
+    /* 64. Border style example */
+    .border-styles-example {
+      border: 3px solid black;
+      border: 3px dashed red;
+      border: 3px inset green;
+    }
+
+    /* 65. Border width example */
+    .border-width-example {
+      border: thin solid blue;
+      border: medium solid blue;
+      border: thick solid blue;
+    }
+
+    /* 66. Border color example */
+    .border-color-example {
+      border: 3px solid blue;
+      border: 3px solid #0000FF;
+      border: 3px solid rgb(0, 0, 255);
+    }
+
+    /* 67. Border radius example */
+    .border-radius-example {
+      border-radius: 10px;
+      border-radius: 50%;
+    }
+
+    /* 68. Table (3x3 grid) */
+    table { width: 100%; border-collapse: collapse; }
+    td, th { border: 1px solid black; padding: 10px; text-align: center; }
+
+    /* 69. Table with border collapse */
+    table.collapsed { border-collapse: collapse; }
+    
+    /* 70. Cellspacing example */
+    .cellspacing-example {
+      border-spacing: 10px;
+    }
+
+    /* 71. Cellpadding example */
+    .cellpadding-example {
+      padding: 10px;
+    }
+
+    /* 72. Vertical alignment in table */
+    .vertical-align { vertical-align: middle; }
+
+    /* 73. Iframe example */
+    .iframe-container { width: 500px; height: 300px; }
+
+    /* 74. Video tag example */
+    .video-container { width: 100%; max-width: 500px; }
+
+    /* 75. Audio tag example */
+    .audio-container { width: 100%; }
+
+    /* 76. Highlight text using span */
+    .highlight-text { background-color: yellow; }
+
+    /* 77. Highlight text using mark */
+    .mark-text { background-color: yellow; }
+
+    /* 78. Rotate on hover */
+    .rotate-on-hover { width: 100px; height: 100px; transition: transform 0.3s; }
+    .rotate-on-hover:hover { transform: rotate(100deg); }
+
+    /* 79. Translate on hover */
+    .translate-on-hover { width: 100px; height: 100px; transition: transform 0.3s; }
+    .translate-on-hover:hover { transform: translate(50px, 50px); }
+
+    /* 80. Skew on hover */
+    .skew-on-hover { width: 100px; height: 100px; transition: transform 0.3s; }
+    .skew-on-hover:hover { transform: skew(20deg, 0deg); }
+  </style>
+</head>
+<body>
+
+
