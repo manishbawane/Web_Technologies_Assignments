@@ -1,0 +1,131 @@
+3.
+<p style="border: solid; width: 100px; height: 100px;">This is a paragraph with a solid border and 100x100 dimension.</p>
+
+4.
+<p style="border: dashed;" onmouseover="this.style.backgroundColor='grey'" onmouseout="this.style.backgroundColor=''">
+  Hover over this text to change background color.
+</p>
+
+5.
+<p style="background-color: lightblue;">
+  This is a <b style="background-color: lightgreen;">bold text</b> inside a paragraph with background color.
+</p>
+
+6.
+<h1 style="font-size: 40px; background-color: lightcoral; font-family: Arial, sans-serif;">
+  This is a styled H1 tag.
+</h1>
+
+8.
+<p style="text-align: left;">This is left-aligned text.</p>
+<p style="text-align: center;">This is center-aligned text.</p>
+<p style="text-align: justify;">This is justified text.</p>
+<p style="text-align: right;">This is right-aligned text.</p>
+
+9.
+<p style="text-indent: 100px;">This paragraph has a text indent of 100px.</p>
+
+10.
+<p style="text-decoration: underline;">This text has an underline.</p>
+<p style="text-decoration: overline;">This text has an overline.</p>
+<p style="text-decoration: line-through;">This text has a line-through.</p>
+<p style="text-decoration: none;">This text has no decoration.</p>
+
+11.
+<a href="https://www.google.com" title="Go to Google" style="color: red; text-decoration: none;">
+  Visit Google
+</a>
+
+12.
+<img src="https://via.placeholder.com/200" alt="Image" style="width: 200px; height: 200px; border-radius: 10px;" onmouseover="this.style.borderRadius='50%'" onmouseout="this.style.borderRadius='10px'">
+
+13.
+<p style="line-height: 2; word-spacing: 20px; letter-spacing: 5px;">
+  This is a paragraph with line-height, word-spacing, and letter-spacing applied.
+</p>
+
+14.
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<p style="font-family: 'Roboto', sans-serif;">
+  This is a paragraph with Google Font "Roboto".
+</p>
+
+15.
+<p>This is a paragraph. It is a block-level element that separates content.</p>
+<div>This is a div. It is also a block-level element, but it can contain other block or inline elements.</div>
+
+16.
+<ul>
+  <li>New York</li>
+  <li>Los Angeles</li>
+  <li>Chicago</li>
+</ul>
+
+17.
+<ol>
+  <li>New York</li>
+  <li>Los Angeles</li>
+  <li>Chicago</li>
+</ol>
+
+18.
+<ul style="list-style-type: none; display: flex;">
+  <li style="margin-right: 20px;">Home</li>
+  <li style="margin-right: 20px;">About</li>
+  <li style="margin-right: 20px;">Services</li>
+  <li>Contact</li>
+</ul>
+
+19.
+<p style="background-color: rgb(255, 99, 71);">This is a paragraph with background color in RGB format.</p>
+<p style="background-color: #FF6347;">This is a paragraph with background color in Hex format.</p>
+<p style="background-color: #F00;">This is a paragraph with background color in 3-digit Hex format.</p>
+
+20.
+<p style="background-color: rgba(255, 99, 71, 0.5);">This is a paragraph with background color using rgba(). The 'a' defines opacity.</p>
+
+21.
+<div style="width: 100px; height: 100px; position: absolute; left: 300px; top: 200px; background-color: lightgreen;">
+  Positioned div
+</div>
+
+22.
+<div style="width: 1200px; height: 600px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: lightblue;">
+  Centered div
+</div>
+
+23.
+<div style="width: 100px; height: 100px; background-color: grey;">
+  Grey div
+</div>
+
+24.
+<div id="myDiv" style="width: 100px; height: 100px; background-color: grey;">
+  Div with background color
+</div>
+<style>
+  #myDiv {
+    background-color: blue !important;
+  }
+</style>
+
+25.
+<h1><span style="color: red;">h</span>ello world</h1>
+
+27.
+<ul>
+  <li style="background-color: grey; filter: brightness(80%);">New York</li>
+  <li>Los Angeles</li>
+  <li style="background-color: grey; filter: brightness(80%);">Chicago</li>
+</ul>
+
+28.
+<div class="div1">Div 1 with background color red</div>
+<div class="div2">Div 2 with background color green</div>
+<div class="div3">Div 3 with background color blue</div>
+
+<style>
+  .div1 { background-color: red; }
+  .div2 { background-color: green; }
+  .div3 { background-color: blue; }
+</style>
